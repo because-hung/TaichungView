@@ -11,9 +11,10 @@
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
         v-model.trim="txt"
+        @keyup.enter="filterData()"
       />
       <button
-        class="btn btn-outline-secondary"
+        class="btn btn-outline-secondary d-none d-sm-block"
         type="button"
         id="button-addon2"
         @click="filterData()"
@@ -68,7 +69,8 @@ export default {
   methods: {
     getApi() {
       this.data = api
-      this.dataFilter = api.pop()
+      this.data.pop()
+      this.dataFilter = api
       console.log(this.data)
     },
     filterData() {
