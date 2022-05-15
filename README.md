@@ -1,3 +1,6 @@
+練習的小作品
+簡易的台中景點搜尋網
+
 # taichungview
 
 ## Project setup
